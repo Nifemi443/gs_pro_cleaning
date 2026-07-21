@@ -1,0 +1,10 @@
+"""API health endpoint (versioned)."""
+
+from fastapi import APIRouter
+
+router = APIRouter()
+
+
+@router.get("/health")
+async def api_health() -> dict[str, str]:
+    return {"status": "ok"}
