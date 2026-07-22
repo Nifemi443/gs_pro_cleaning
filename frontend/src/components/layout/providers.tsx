@@ -4,6 +4,8 @@ import * as React from "react";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "sonner";
 
+import { QuoteModal, QuoteProvider } from "@/components/quote";
+
 type ProvidersProps = {
   children: React.ReactNode;
 };
@@ -16,7 +18,10 @@ export function Providers({ children }: ProvidersProps) {
       forcedTheme="light"
       disableTransitionOnChange
     >
-      {children}
+      <QuoteProvider>
+        {children}
+        <QuoteModal />
+      </QuoteProvider>
       <Toaster richColors closeButton position="top-right" />
     </ThemeProvider>
   );

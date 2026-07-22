@@ -4,6 +4,7 @@ import { ArrowRight, Check } from "lucide-react";
 
 import { BrandButton, QuoteButton } from "@/components/buttons";
 import { getWhatsAppQuoteUrl } from "@/lib/whatsapp";
+import type { CleaningService } from "@/lib/quote";
 import { cn } from "@/lib/utils";
 
 export type ServiceContentData = {
@@ -12,6 +13,8 @@ export type ServiceContentData = {
   description: string;
   bullets: string[];
   quoteMessage: string;
+  /** Prefills the quote modal service field when present */
+  quoteService?: CleaningService;
 };
 
 type ServiceContentProps = {
@@ -54,7 +57,7 @@ export function ServiceContent({ service, className }: ServiceContentProps) {
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
         <QuoteButton
           size="md"
-          message={service.quoteMessage}
+          defaultService={service.quoteService}
           className="group/cta bg-brand-green hover:bg-brand-green-hover"
           rightIcon={
             <ArrowRight className="size-4 transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] motion-safe:group-hover/cta:translate-x-1" />

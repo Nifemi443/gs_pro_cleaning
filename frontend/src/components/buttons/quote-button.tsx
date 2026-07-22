@@ -4,38 +4,40 @@ import * as React from "react";
 import type { VariantProps } from "class-variance-authority";
 
 import { BrandButton, brandButtonVariants } from "@/components/buttons/brand-button";
-import { getWhatsAppQuoteUrl } from "@/lib/whatsapp";
+import { useQuote } from "@/components/quote/QuoteProvider";
+import type { CleaningService } from "@/lib/quote";
 import { cn } from "@/lib/utils";
 
 type QuoteButtonProps = Omit<React.ComponentProps<typeof BrandButton>, "render" | "nativeButton"> &
   VariantProps<typeof brandButtonVariants> & {
+    /** Prefill cleaning service when the modal opens */
+    defaultService?: CleaningService;
+    /** @deprecated Direct WhatsApp message — modal flow is preferred */
     message?: string;
   };
 
+/**
+ * Opens the multi-step quote request modal.
+ */
 export function QuoteButton({
-  message,
+  defaultService,
+  message: _message,
   className,
-  children = "Book a Cleaning",
+  children = "Request a Free Quote",
   onClick,
   variant = "primary",
   ...props
 }: QuoteButtonProps) {
-  const href = getWhatsAppQuoteUrl(message);
-  const isExternal = href.startsWith("http");
+  const { openQuote } = useQuote();
 
   return (
     <BrandButton
       className={cn(className)}
       variant={variant}
-      nativeButton={false}
-      render={
-        <a
-          href={href}
-          target={isExternal ? "_blank" : undefined}
-          rel={isExternal ? "noopener noreferrer" : undefined}
-          onClick={onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined}
-        />
-      }
+      onClick={(event) => {
+        onClick?.(event);
+        openQuote({ defaultService });
+      }}
       {...props}
     >
       {children}
