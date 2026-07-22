@@ -69,9 +69,9 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-heading: var(--font-fraunces), ui-serif, Georgia, serif;
-  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans: var(--font-plus-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, "Times New Roman", serif;
 
   --radius-sm: var(--gs-radius-sm);
   --radius-md: var(--gs-radius-md);
@@ -95,6 +95,19 @@
 
   body {
     @apply bg-brand-base text-text-primary font-sans;
+    font-family: var(--font-body);
+  }
+
+  /* Site-wide display pairing — Fraunces for editorial headings */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-variation-settings:
+      "SOFT" 20,
+      "WONK" 0,
+      "opsz" 56;
   }
 
   :focus-visible {

@@ -32,17 +32,18 @@ export function HeroContent() {
       <motion.h1
         id="hero-heading"
         className="text-brand-slate font-[family-name:var(--font-display)] text-[length:var(--text-display-l)] leading-[var(--leading-display)] font-semibold tracking-[var(--tracking-display)]"
+        style={{ fontVariationSettings: '"SOFT" 20, "WONK" 0, "opsz" 72' }}
         {...reveal(0.42)}
       >
-        Unlock the door to a space that&apos;s already finished.
+        Come home to a space that&apos;s already finished.
       </motion.h1>
 
       <motion.p
         className="text-text-secondary mt-6 max-w-md text-[length:var(--text-body-lg)] leading-[var(--leading-body)]"
         {...reveal(0.54)}
       >
-        GS Pro cleans homes and offices across Nigeria and the United States — checklist-tight,
-        consistent every visit, so you can trust someone else in your space.
+        GS Pro cleans homes and offices across Nigeria and the United States. Every visit is
+        checklist-tight and consistent, so you can trust someone else in your space.
       </motion.p>
 
       <motion.div
