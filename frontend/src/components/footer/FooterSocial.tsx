@@ -1,5 +1,6 @@
 "use client";
 
+import { CONTACT } from "@/constants/site";
 import { cn } from "@/lib/utils";
 import { getWhatsAppQuoteUrl } from "@/lib/whatsapp";
 
@@ -74,7 +75,7 @@ export function FooterSocial({ className }: { className?: string }) {
     {
       id: "instagram",
       label: "Visit GS Pro on Instagram",
-      href: "#",
+      href: CONTACT.instagramUrl,
       icon: <IconInstagram className="size-[18px]" />,
     },
     {

@@ -7,6 +7,16 @@ export const SITE = {
   shortName: "GS Pro",
 } as const;
 
+/** Public contact details shown in the footer and used for WhatsApp. */
+export const CONTACT = {
+  phoneDisplay: "+1 202 209 6917",
+  phoneTel: "+12022096917",
+  /** Digits only — WhatsApp / wa.me */
+  phoneE164Digits: "12022096917",
+  instagramHandle: "Gs_procleaners",
+  instagramUrl: "https://www.instagram.com/Gs_procleaners/",
+} as const;
+
 export type NavLink = {
   label: string;
   href: string;

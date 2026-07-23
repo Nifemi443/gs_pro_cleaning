@@ -8,7 +8,7 @@ import { FooterColumn, FooterLink } from "@/components/footer/FooterColumn";
 import { FooterSocial } from "@/components/footer/FooterSocial";
 import { Container } from "@/components/layout/container";
 import { Logo } from "@/components/layout/logo";
-import { NAV_LINKS, ROUTES } from "@/constants/site";
+import { CONTACT, NAV_LINKS, ROUTES } from "@/constants/site";
 import { cn } from "@/lib/utils";
 
 const SERVICE_LINKS = [
@@ -22,7 +22,15 @@ const SERVICE_LINKS = [
   },
 ] as const;
 
-const CONTACT_ITEMS = [
+type ContactItem = {
+  id: string;
+  icon: typeof Phone;
+  label: string;
+  value: string;
+  href?: string;
+};
+
+const CONTACT_ITEMS: ContactItem[] = [
   {
     id: "address",
     icon: MapPin,
@@ -33,7 +41,8 @@ const CONTACT_ITEMS = [
     id: "phone",
     icon: Phone,
     label: "Phone number",
-    value: "[Phone Number]",
+    value: CONTACT.phoneDisplay,
+    href: `tel:${CONTACT.phoneTel}`,
   },
   {
     id: "email",
@@ -47,10 +56,10 @@ const CONTACT_ITEMS = [
     label: "Business hours",
     value: "[Mon–Sat, 8am–6pm]",
   },
-] as const;
+];
 
 /**
- * Site footer — navy close-out with quote CTA and placeholder contact fields.
+ * Site footer — navy close-out with quote CTA and contact details.
  *
  * TikTok omitted until the client confirms an active account.
  */
@@ -142,7 +151,16 @@ export function Footer() {
                     />
                     <span className="text-sm leading-relaxed text-white/70">
                       <span className="sr-only">{item.label}: </span>
-                      {item.value}
+                      {item.href ? (
+                        <a
+                          href={item.href}
+                          className="hover:text-brand-gold focus-visible:text-brand-gold transition-colors focus-visible:outline-none"
+                        >
+                          {item.value}
+                        </a>
+                      ) : (
+                        item.value
+                      )}
                     </span>
                   </li>
                 );
