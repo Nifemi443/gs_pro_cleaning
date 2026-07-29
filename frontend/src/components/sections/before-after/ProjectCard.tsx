@@ -70,7 +70,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <Link
           href={`/#${project.id}`}
           className={cn(
-            "bg-brand-navy absolute right-3 bottom-3 z-30 inline-flex items-center gap-1.5 rounded-[8px] px-2.5 py-1.5 text-xs font-semibold text-white",
+            "bg-brand-navy absolute top-3 right-3 z-30 inline-flex items-center gap-1.5 rounded-[8px] px-2.5 py-1.5 text-xs font-semibold text-white",
             "opacity-0 transition-opacity duration-300 motion-safe:group-hover:opacity-100",
             "focus-visible:ring-brand-navy focus-visible:opacity-100 focus-visible:ring-2 focus-visible:ring-offset-2",
             "group-focus-within:opacity-100",

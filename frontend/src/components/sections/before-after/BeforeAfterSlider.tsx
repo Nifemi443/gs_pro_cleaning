@@ -16,8 +16,12 @@ type BeforeAfterSliderProps = {
   className?: string;
 };
 
+const LABEL_MIN_PANEL = 28;
+
 /**
  * Interactive before/after comparison with real photos.
+ * Before = left of handle, After = right. Labels are clipped to their own side
+ * so they never overlap each other or the divider.
  */
 export function BeforeAfterSlider({
   beforeSrc,
@@ -83,6 +87,9 @@ export function BeforeAfterSlider({
     }
   };
 
+  const showBeforeLabel = position >= LABEL_MIN_PANEL;
+  const showAfterLabel = position <= 100 - LABEL_MIN_PANEL;
+
   return (
     <div
       ref={containerRef}
@@ -94,7 +101,7 @@ export function BeforeAfterSlider({
       role="img"
       aria-label={`${beforeAlt}. ${afterAlt}. Use the slider handle to compare before and after.`}
     >
-      {/* Before (bottom layer) */}
+      {/* Before — full base, visible left of the handle */}
       <Image
         src={beforeSrc}
         alt=""
@@ -103,14 +110,28 @@ export function BeforeAfterSlider({
         className="object-cover object-center"
         draggable={false}
       />
-      <span className="pointer-events-none absolute bottom-3 left-3 z-[5] rounded-md bg-black/45 px-2.5 py-1 text-[0.625rem] font-medium tracking-wide text-white uppercase">
-        {beforeLabel}
-      </span>
 
-      {/* After — clipped by slider */}
+      {/* Before label — clipped to the left panel only */}
       <div
-        className="absolute inset-0 overflow-hidden"
+        className="pointer-events-none absolute inset-0 z-[5]"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
+        aria-hidden
+      >
+        <span
+          className={cn(
+            "absolute bottom-3 left-3 max-w-[min(11rem,calc(100%-1.5rem))] truncate rounded-md bg-black/55 px-2.5 py-1 text-[0.625rem] font-medium tracking-wide text-white uppercase",
+            "transition-opacity duration-150",
+            showBeforeLabel ? "opacity-100" : "opacity-0",
+          )}
+        >
+          {beforeLabel}
+        </span>
+      </div>
+
+      {/* After — revealed to the right of the handle */}
+      <div
+        className="absolute inset-0 z-[1] overflow-hidden"
+        style={{ clipPath: `inset(0 0 0 ${position}%)` }}
         aria-hidden
       >
         <Image
@@ -121,7 +142,13 @@ export function BeforeAfterSlider({
           className="object-cover object-center"
           draggable={false}
         />
-        <span className="pointer-events-none absolute right-3 bottom-3 z-[5] rounded-md bg-black/45 px-2.5 py-1 text-[0.625rem] font-medium tracking-wide text-white uppercase">
+        <span
+          className={cn(
+            "absolute right-3 bottom-3 max-w-[min(11rem,calc(100%-1.5rem))] truncate rounded-md bg-black/55 px-2.5 py-1 text-[0.625rem] font-medium tracking-wide text-white uppercase",
+            "transition-opacity duration-150",
+            showAfterLabel ? "opacity-100" : "opacity-0",
+          )}
+        >
           {afterLabel}
         </span>
       </div>
@@ -138,7 +165,7 @@ export function BeforeAfterSlider({
         aria-valuemin={10}
         aria-valuemax={90}
         aria-valuenow={Math.round(position)}
-        aria-valuetext={`${Math.round(position)} percent after`}
+        aria-valuetext={`${Math.round(position)} percent before, ${Math.round(100 - position)} percent after`}
         role="slider"
         tabIndex={0}
         className={cn(

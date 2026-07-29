@@ -9,15 +9,17 @@ const PROJECTS: ProjectCardData[] = [
   {
     id: "residential-deep-clean",
     title: "Residential Deep Clean",
-    propertyType: "3-Bedroom Home",
+    propertyType: "Family Home",
     description:
-      "Full kitchen and bathroom reset ahead of a family move-in — floors, vents, and appliance interiors signed off.",
-    beforeLabel: "Living Room — Before",
-    afterLabel: "Living Room — After",
-    beforeAlt: "Before and after: residential deep clean, 3-bedroom home living room",
-    afterAlt: "After: residential deep clean, 3-bedroom home living room",
-    beforeSrc: "/images/before-after/residential-before.jpg",
-    afterSrc: "/images/before-after/residential-after.jpg",
+      "Construction dust, debris, and floor residue cleared from the entry hallway — polished tile finished to a mirror shine.",
+    beforeLabel: "Hallway — Before",
+    afterLabel: "Hallway — After",
+    beforeAlt:
+      "Before: residential deep clean of a home hallway with dusty black tile floor beside a staircase",
+    afterAlt:
+      "After: residential deep clean of the same hallway with polished reflective black tile floor",
+    beforeSrc: "/images/before-after/residential-after.jpg",
+    afterSrc: "/images/before-after/residential-before.jpg",
     featured: true,
     className: "sm:col-span-2 lg:col-span-4 lg:row-span-2",
   },
