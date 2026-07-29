@@ -32,7 +32,7 @@ export function Navbar({ className }: { className?: string }) {
       )}
     >
       <div className="mx-auto flex h-[var(--header-height)] max-w-[var(--container-max)] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Logo height={42} priority />
+        <Logo height={52} priority />
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
           {NAV_LINKS.map((link) => (
@@ -60,7 +60,7 @@ export function Navbar({ className }: { className?: string }) {
           <SheetContent side="right" className="border-l-border bg-surface w-full max-w-sm p-0">
             <SheetHeader className="border-border border-b px-6 py-5 text-left">
               <SheetTitle className="sr-only">Mobile navigation</SheetTitle>
-              <Logo height={40} href={null} />
+              <Logo height={48} href={null} />
             </SheetHeader>
             <nav className="flex flex-col gap-1 px-4 py-6" aria-label="Mobile">
               {NAV_LINKS.map((link) => (
