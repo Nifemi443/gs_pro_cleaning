@@ -26,7 +26,7 @@ export const HERO_STATS: HeroStatCard[] = [
   {
     id: "checklist",
     title: "Signed-off checklist",
-    detail: "Kitchens, baths, floors — verified before we leave",
+    detail: "Kitchens, baths, floors - verified before we leave",
     className: "right-2 top-[42%] sm:-right-3 lg:-right-6",
     delay: 1.05,
   },

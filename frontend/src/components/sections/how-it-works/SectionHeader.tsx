@@ -30,7 +30,7 @@ export function SectionHeader({ className }: SectionHeaderProps) {
         id="how-it-works-heading"
         className="text-brand-navy font-[family-name:var(--font-display)] text-[length:var(--text-h2)] leading-[var(--leading-heading)] font-semibold tracking-[var(--tracking-heading)]"
       >
-        From Quote to Clean — Four Clear Steps
+        From Quote to Clean - Four Clear Steps
       </h2>
       <p className="mt-4 text-[length:var(--text-body-lg)] leading-[1.65] text-[#3d4654]">
         No fixed prices, no upfront payment to get started. Tell us about the space, get a

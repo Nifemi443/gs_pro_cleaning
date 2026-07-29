@@ -19,7 +19,7 @@ export type ProjectCardData = {
   afterAlt: string;
   beforeSrc: string;
   afterSrc: string;
-  /** Featured card — larger footprint + gold accent */
+  /** Featured card - larger footprint + gold accent */
   featured?: boolean;
   className?: string;
 };

@@ -101,7 +101,7 @@ export function BeforeAfterSlider({
       role="img"
       aria-label={`${beforeAlt}. ${afterAlt}. Use the slider handle to compare before and after.`}
     >
-      {/* Before — full base, visible left of the handle */}
+      {/* Before - full base, visible left of the handle */}
       <Image
         src={beforeSrc}
         alt=""
@@ -111,7 +111,7 @@ export function BeforeAfterSlider({
         draggable={false}
       />
 
-      {/* Before label — clipped to the left panel only */}
+      {/* Before label - clipped to the left panel only */}
       <div
         className="pointer-events-none absolute inset-0 z-[5]"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
@@ -128,7 +128,7 @@ export function BeforeAfterSlider({
         </span>
       </div>
 
-      {/* After — revealed to the right of the handle */}
+      {/* After - revealed to the right of the handle */}
       <div
         className="absolute inset-0 z-[1] overflow-hidden"
         style={{ clipPath: `inset(0 0 0 ${position}%)` }}

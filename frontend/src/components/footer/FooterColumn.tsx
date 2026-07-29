@@ -37,7 +37,7 @@ type FooterLinkProps = {
   className?: string;
 };
 
-/** Footer text link — gold color shift on hover (no underline). */
+/** Footer text link - gold color shift on hover (no underline). */
 export function FooterLink({ href, children, className }: FooterLinkProps) {
   return (
     <Link

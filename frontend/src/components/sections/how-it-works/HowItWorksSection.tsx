@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/sections/how-it-works/SectionHeader"
 import { Timeline } from "@/components/sections/how-it-works/Timeline";
 
 /**
- * How It Works — quote → estimate → schedule → clean.
+ * How It Works - quote → estimate → schedule → clean.
  * Lowers friction; does not introduce a new decision.
  */
 export function HowItWorksSection() {

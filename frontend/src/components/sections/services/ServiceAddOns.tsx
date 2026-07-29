@@ -39,7 +39,7 @@ const ADD_ONS: AddOnItem[] = [
     id: "upholstery",
     title: "Upholstery Spot Treatment",
     imageSrc: "/images/addons/upholstery-spot-treatment.jpg",
-    alt: "Upholstered seating with a focused spot-treatment area",
+    alt: "Fabric upholstery being spot-treated with a microfiber cloth",
   },
 ];
 
@@ -48,14 +48,14 @@ type ServiceAddOnsProps = {
 };
 
 /**
- * Compact add-on row — not a fifth full-weight alternating service block.
+ * Compact add-on row - not a fifth full-weight alternating service block.
  */
 export function ServiceAddOns({ className }: ServiceAddOnsProps) {
   const reduceMotion = useReducedMotion();
   const quoteMessage =
-    "Hello GS Pro — I'd like a quote for Other Services (sofa, rug, mattress, or upholstery).";
+    "Hello GS Pro - I'd like a quote for Other Services (sofa, rug, mattress, or upholstery).";
   const includedHref = getWhatsAppQuoteUrl(
-    "Hello GS Pro — please share what's included in Other Services add-ons.",
+    "Hello GS Pro - please share what's included in Other Services add-ons.",
   );
   const includedExternal = includedHref.startsWith("http");
 
@@ -84,7 +84,7 @@ export function ServiceAddOns({ className }: ServiceAddOnsProps) {
             Other Services
           </h3>
           <p className="mt-2 text-sm leading-[1.65] text-[#3d4654] sm:text-base">
-            Add-on and specialty cleans you can book alongside a visit or on their own — sofa, rugs,
+            Add-on and specialty cleans you can book alongside a visit or on their own - sofa, rugs,
             mattresses, and targeted upholstery work.
           </p>
         </div>

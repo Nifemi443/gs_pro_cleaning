@@ -12,7 +12,7 @@ function ReviewRow({ label, value }: { label: string; value: string }) {
   return (
     <div className="grid gap-0.5 border-b border-[#ebe8e3] py-3 last:border-b-0 sm:grid-cols-[9rem_1fr] sm:gap-4">
       <dt className="text-xs font-medium tracking-wide text-[#8a8490] uppercase">{label}</dt>
-      <dd className="text-brand-navy text-sm leading-relaxed break-words">{value || "—"}</dd>
+      <dd className="text-brand-navy text-sm leading-relaxed break-words">{value || "-"}</dd>
     </div>
   );
 }

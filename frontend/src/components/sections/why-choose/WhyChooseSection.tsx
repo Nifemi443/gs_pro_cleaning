@@ -25,7 +25,7 @@ const DIFFERENTIATORS: Differentiator[] = [
     id: "trained-team",
     title: "Trained & Professional Team",
     description:
-      "Every cleaner completes GS Pro standards training before working unsupervised — we don't send someone who was just hired that morning.",
+      "Every cleaner completes GS Pro standards training before working unsupervised - we don't send someone who was just hired that morning.",
     icon: BadgeCheck,
     iconTone: "green",
   },
@@ -55,7 +55,7 @@ const DIFFERENTIATORS: Differentiator[] = [
     id: "reliable-communication",
     title: "Reliable Communication",
     description:
-      "You get confirmed booking times, a heads-up if a cleaner is running late, and a real point of contact — not radio silence until the doorbell rings.",
+      "You get confirmed booking times, a heads-up if a cleaner is running late, and a real point of contact - not radio silence until the doorbell rings.",
     icon: MessageCircle,
   },
   {
@@ -68,7 +68,7 @@ const DIFFERENTIATORS: Differentiator[] = [
 ];
 
 /**
- * Why Choose GS Pro — process-led differentiators, not buzzword cards.
+ * Why Choose GS Pro - process-led differentiators, not buzzword cards.
  */
 export function WhyChooseSection() {
   const reduceMotion = useReducedMotion();

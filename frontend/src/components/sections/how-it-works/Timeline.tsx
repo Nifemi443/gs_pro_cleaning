@@ -85,7 +85,7 @@ export function Timeline({ className }: TimelineProps) {
 
   return (
     <div ref={containerRef} className={cn("relative", className)}>
-      {/* —— Desktop / large: horizontal track —— */}
+      {/* -- Desktop / large: horizontal track -- */}
       <div
         className="pointer-events-none absolute top-[2.85rem] right-0 left-0 hidden h-[2px] lg:block"
         aria-hidden
@@ -97,7 +97,7 @@ export function Timeline({ className }: TimelineProps) {
         />
       </div>
 
-      {/* —— Mobile: vertical track (hidden on md 2×2 and lg horizontal) —— */}
+      {/* -- Mobile: vertical track (hidden on md 2×2 and lg horizontal) -- */}
       <div
         className="pointer-events-none absolute top-3 bottom-3 left-[1.2rem] w-[2px] md:hidden"
         aria-hidden
@@ -109,7 +109,7 @@ export function Timeline({ className }: TimelineProps) {
         />
       </div>
 
-      {/* —— Tablet: top progress bar for the 2×2 grid —— */}
+      {/* -- Tablet: top progress bar for the 2×2 grid -- */}
       <div
         className="pointer-events-none absolute -top-6 right-0 left-0 hidden h-[2px] md:block lg:hidden"
         aria-hidden

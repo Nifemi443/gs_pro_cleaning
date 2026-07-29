@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 /**
- * Premium quote request modal — multi-step form to WhatsApp.
+ * Premium quote request modal - multi-step form to WhatsApp.
  */
 export function QuoteModal() {
   const { open, closeQuote, defaultService } = useQuote();
@@ -50,7 +50,7 @@ export function QuoteModal() {
                 Request a Free Quote
               </DialogPrimitive.Title>
               <DialogPrimitive.Description className="mt-1 text-sm text-[#5c6570]">
-                A few quick details — then we&apos;ll open WhatsApp with your request ready to send.
+                A few quick details - then we&apos;ll open WhatsApp with your request ready to send.
               </DialogPrimitive.Description>
             </div>
             <DialogPrimitive.Close

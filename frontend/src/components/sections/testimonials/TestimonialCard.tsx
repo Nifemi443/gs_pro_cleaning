@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 
 export type TestimonialPlaceholder = {
   id: string;
-  /** Structural service pattern — not a fabricated review claim */
+  /** Structural service pattern - not a fabricated review claim */
   servicePattern: string;
   featured?: boolean;
   className?: string;
@@ -36,7 +36,7 @@ function UnfilledStars() {
 }
 
 /**
- * Clearly placeholder testimonial card — no fabricated names, quotes, or ratings.
+ * Clearly placeholder testimonial card - no fabricated names, quotes, or ratings.
  */
 export function TestimonialCard({ placeholder, index }: TestimonialCardProps) {
   const reduceMotion = useReducedMotion();
@@ -49,7 +49,7 @@ export function TestimonialCard({ placeholder, index }: TestimonialCardProps) {
         "hover:shadow-[0_10px_28px_rgb(18_41_77/0.1)]",
         placeholder.className,
       )}
-      aria-label="Testimonial placeholder — content pending"
+      aria-label="Testimonial placeholder - content pending"
       initial={reduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}

@@ -11,9 +11,9 @@ const PROJECTS: ProjectCardData[] = [
     title: "Residential Deep Clean",
     propertyType: "Family Home",
     description:
-      "Construction dust, debris, and floor residue cleared from the entry hallway — polished tile finished to a mirror shine.",
-    beforeLabel: "Hallway — Before",
-    afterLabel: "Hallway — After",
+      "Construction dust, debris, and floor residue cleared from the entry hallway - polished tile finished to a mirror shine.",
+    beforeLabel: "Hallway - Before",
+    afterLabel: "Hallway - After",
     beforeAlt:
       "Before: residential deep clean of a home hallway with dusty black tile floor beside a staircase",
     afterAlt:
@@ -29,8 +29,8 @@ const PROJECTS: ProjectCardData[] = [
     propertyType: "Corporate Office",
     description:
       "Open-plan desks, glass partitions, and breakroom sanitation ready for Monday morning traffic.",
-    beforeLabel: "Office Floor — Before",
-    afterLabel: "Office Floor — After",
+    beforeLabel: "Office Floor - Before",
+    afterLabel: "Office Floor - After",
     beforeAlt: "Before and after: office cleaning, corporate open-plan workspace",
     afterAlt: "After: office cleaning, corporate open-plan workspace",
     beforeSrc: "/images/before-after/office-before.jpg",
@@ -43,8 +43,8 @@ const PROJECTS: ProjectCardData[] = [
     propertyType: "Newly Built Home",
     description:
       "Dust, adhesive residue, and fine debris cleared from a new kitchen so handover photos look finished.",
-    beforeLabel: "Kitchen Build — Before",
-    afterLabel: "Kitchen Build — After",
+    beforeLabel: "Kitchen Build - Before",
+    afterLabel: "Kitchen Build - After",
     beforeAlt: "Before and after: post-construction cleanup, newly built home kitchen",
     afterAlt: "After: post-construction cleanup, newly built home kitchen",
     beforeSrc: "/images/before-after/post-construction-before.jpg",
@@ -57,8 +57,8 @@ const PROJECTS: ProjectCardData[] = [
     propertyType: "Rental Apartment",
     description:
       "Bathroom scale, grout, and fixtures cleaned to an inspection-ready standard before keys were returned.",
-    beforeLabel: "Bathroom — Before",
-    afterLabel: "Bathroom — After",
+    beforeLabel: "Bathroom - Before",
+    afterLabel: "Bathroom - After",
     beforeAlt: "Before and after: move-out cleaning, rental apartment bathroom",
     afterAlt: "After: move-out cleaning, rental apartment bathroom",
     beforeSrc: "/images/before-after/move-out-before.jpg",
@@ -71,8 +71,8 @@ const PROJECTS: ProjectCardData[] = [
     propertyType: "Retail Storefront",
     description:
       "Floors, glass, and fitting rooms refreshed overnight so the storefront opened spotless for trading.",
-    beforeLabel: "Storefront — Before",
-    afterLabel: "Storefront — After",
+    beforeLabel: "Storefront - Before",
+    afterLabel: "Storefront - After",
     beforeAlt: "Before and after: commercial cleaning, retail storefront interior",
     afterAlt: "After: commercial cleaning, retail storefront interior",
     beforeSrc: "/images/before-after/commercial-before.jpg",
@@ -82,7 +82,7 @@ const PROJECTS: ProjectCardData[] = [
 ];
 
 /**
- * Before & After Showcase — visual proof through transformation.
+ * Before & After Showcase - visual proof through transformation.
  */
 export function BeforeAfterSection() {
   return (

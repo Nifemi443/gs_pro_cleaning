@@ -33,7 +33,7 @@ export function SectionHeader({ className }: SectionHeaderProps) {
         A Professional Process Behind Every Clean
       </h2>
       <p className="mt-4 max-w-md text-[length:var(--text-body-lg)] leading-[1.65] text-[#3d4654]">
-        We built our service around what clients notice when a job goes wrong — skipped rooms, late
+        We built our service around what clients notice when a job goes wrong - skipped rooms, late
         arrivals, and pricing that doesn&apos;t match the space. Here&apos;s how we work
         differently.
       </p>

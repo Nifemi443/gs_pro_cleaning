@@ -13,7 +13,7 @@ type TrustCardProps = {
 };
 
 /**
- * Floating trust card — qualitative markers only, no fabricated stats.
+ * Floating trust card - qualitative markers only, no fabricated stats.
  */
 export function TrustCard({ className, delay = 0.15 }: TrustCardProps) {
   const reduceMotion = useReducedMotion();

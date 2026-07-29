@@ -6,7 +6,7 @@ import { Providers } from "@/components/layout/providers";
 import "./globals.css";
 
 /**
- * Display — Fraunces (editorial serif). Soft axis kept low via CSS
+ * Display - Fraunces (editorial serif). Soft axis kept low via CSS
  * font-variation-settings so letterforms stay premium, not playful.
  */
 const fontDisplay = Fraunces({
@@ -16,7 +16,7 @@ const fontDisplay = Fraunces({
   display: "swap",
 });
 
-/** Body/UI — Plus Jakarta Sans (clean grotesk; replaces DM Sans). */
+/** Body/UI - Plus Jakarta Sans (clean grotesk; replaces DM Sans). */
 const fontBody = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | GS Pro Cleaning Services",
   },
   description:
-    "Premium residential and commercial cleaning across Nigeria and the United States — vetted staff, consistent finish.",
+    "Premium residential and commercial cleaning across Nigeria and the United States - vetted staff, consistent finish.",
   applicationName: "GS Pro Cleaning Services",
   robots: { index: true, follow: true },
 };

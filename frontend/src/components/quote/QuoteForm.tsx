@@ -208,7 +208,7 @@ export function QuoteForm({ defaultService, onClose }: QuoteFormProps) {
           {step === 3 ? (
             <QuoteStep
               title={stepMeta.title}
-              description="Pick a time that works — we'll confirm availability."
+              description="Pick a time that works - we'll confirm availability."
             >
               <div className="flex flex-col gap-4">
                 <Field

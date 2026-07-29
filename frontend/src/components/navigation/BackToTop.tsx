@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 const SHOW_AFTER_PX = 480;
 
 /**
- * Floating back-to-top control — appears after scrolling past the hero.
+ * Floating back-to-top control - appears after scrolling past the hero.
  */
 export function BackToTop({ className }: { className?: string }) {
   const reduceMotion = useReducedMotion();

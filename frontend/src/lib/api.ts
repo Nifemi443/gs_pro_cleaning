@@ -1,5 +1,5 @@
 /**
- * Lightweight API client scaffold — no business endpoints yet.
+ * Lightweight API client scaffold - no business endpoints yet.
  */
 
 import { env } from "@/lib/env";

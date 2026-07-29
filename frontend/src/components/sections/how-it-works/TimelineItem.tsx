@@ -56,7 +56,7 @@ export function TimelineItem({ step, index, delay }: TimelineItemProps) {
         {step.number}
       </span>
 
-      {/* Icon — sits beside title on mobile, above on desktop */}
+      {/* Icon - sits beside title on mobile, above on desktop */}
       <span
         className={cn(
           "relative z-[1] mt-1 flex size-10 shrink-0 items-center justify-center rounded-[10px]",

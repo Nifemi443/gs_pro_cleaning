@@ -36,7 +36,7 @@ export function SectionHeader({ className }: SectionHeaderProps) {
           See the Difference Professional Cleaning Makes
         </h2>
         <p className="mt-4 text-[length:var(--text-body-lg)] leading-[var(--leading-body)] text-[#3d4654]">
-          Every job has a before and after — a home cleared for new owners, an office reset for
+          Every job has a before and after - a home cleared for new owners, an office reset for
           Monday, a build dusted for handover. Drag the slider on each project to see what our team
           leaves behind.
         </p>

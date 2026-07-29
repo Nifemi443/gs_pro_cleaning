@@ -7,7 +7,7 @@ type GalleryGridProps = {
 };
 
 /**
- * Uneven masonry-style grid — featured card spans more columns.
+ * Uneven masonry-style grid - featured card spans more columns.
  */
 export function GalleryGrid({ projects }: GalleryGridProps) {
   return (

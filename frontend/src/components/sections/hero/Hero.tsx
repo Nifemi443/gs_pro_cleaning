@@ -5,7 +5,7 @@ import { HeroContent } from "@/components/sections/hero/HeroContent";
 import { HeroVisual } from "@/components/sections/hero/HeroVisual";
 
 /**
- * GS Pro hero — split-screen, left-aligned.
+ * GS Pro hero - split-screen, left-aligned.
  * Trust earned through specificity, not generic “clean tech” abstraction.
  */
 export function Hero() {

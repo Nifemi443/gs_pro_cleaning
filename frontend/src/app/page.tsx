@@ -9,7 +9,7 @@ import { TrustSection } from "@/components/sections/trust";
 import { WhyChooseSection } from "@/components/sections/why-choose";
 
 /**
- * Homepage — sections + site footer.
+ * Homepage - sections + site footer.
  */
 export default function HomePage() {
   return (

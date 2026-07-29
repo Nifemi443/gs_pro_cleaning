@@ -1,5 +1,5 @@
 /**
- * GS Pro Cleaning — Design Tokens
+ * GS Pro Cleaning - Design Tokens
  * Exact palette for Hero / Trust continuity:
  * - Base   #F7F9F8
  * - Slate  #16302B
@@ -108,7 +108,7 @@
   --text-small: 0.875rem;
   --text-caption: 0.75rem;
 
-  /* Retuned for Fraunces (serif) + Plus Jakarta — not the old rounded sans */
+  /* Retuned for Fraunces (serif) + Plus Jakarta - not the old rounded sans */
   --leading-display: 1.12;
   --leading-heading: 1.22;
   --leading-body: 1.65;

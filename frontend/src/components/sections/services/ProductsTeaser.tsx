@@ -12,12 +12,12 @@ type ProductsTeaserProps = {
 };
 
 /**
- * Forthcoming products line — visually quiet, not bookable.
+ * Forthcoming products line - visually quiet, not bookable.
  */
 export function ProductsTeaser({ className }: ProductsTeaserProps) {
   const reduceMotion = useReducedMotion();
   const notifyHref = getWhatsAppQuoteUrl(
-    "Hello GS Pro — please notify me when GS Pro Products are available.",
+    "Hello GS Pro - please notify me when GS Pro Products are available.",
   );
   const notifyExternal = notifyHref.startsWith("http");
 
@@ -51,7 +51,7 @@ export function ProductsTeaser({ className }: ProductsTeaserProps) {
           GS Pro Products
         </h3>
         <p className="mt-3 max-w-md text-sm leading-[1.65] text-[#3d4654] sm:text-base">
-          A forthcoming line of carefully selected cleaning essentials — launching soon for clients
+          A forthcoming line of carefully selected cleaning essentials - launching soon for clients
           who want the same standards at home.
         </p>
         <p className="mt-6">

@@ -9,20 +9,20 @@ import {
   type ServiceFeatureData,
 } from "@/components/sections/services/ServiceFeature";
 
-/** Core bookable services — alternating image/content layout, exact brief order. */
+/** Core bookable services - alternating image/content layout, exact brief order. */
 const CORE_SERVICES: ServiceFeatureData[] = [
   {
     id: "domestic",
     title: "Domestic Cleaning",
     description:
-      "Everyday home cleaning for homeowners and renters — kitchens, baths, and living areas kept to a repeatable standard.",
+      "Everyday home cleaning for homeowners and renters - kitchens, baths, and living areas kept to a repeatable standard.",
     bullets: [
       "Kitchens & bathrooms deep-cleaned",
       "Dusting & surface care",
       "Floor care by surface type",
       "One-time or recurring visits available",
     ],
-    quoteMessage: "Hello GS Pro — I'd like a quote for Domestic Cleaning.",
+    quoteMessage: "Hello GS Pro - I'd like a quote for Domestic Cleaning.",
     quoteService: "Residential Cleaning",
     imageSrc: "/images/services/domestic-cleaning.jpg",
     imageAlt: "Clean residential living space after a domestic home cleaning visit",
@@ -39,7 +39,7 @@ const CORE_SERVICES: ServiceFeatureData[] = [
       "Floor care for high-traffic areas",
       "After-hours service available",
     ],
-    quoteMessage: "Hello GS Pro — I'd like a quote for Commercial Cleaning.",
+    quoteMessage: "Hello GS Pro - I'd like a quote for Commercial Cleaning.",
     quoteService: "Commercial Cleaning",
     imageSrc: "/images/services/commercial-cleaning.jpg",
     imageAlt: "Modern office or retail interior maintained for weekday business use",
@@ -48,14 +48,14 @@ const CORE_SERVICES: ServiceFeatureData[] = [
     id: "post-construction",
     title: "Post-Construction Cleaning",
     description:
-      "Cleanup after renovation or new builds — dust, residue, and fine debris cleared to a handover-ready finish.",
+      "Cleanup after renovation or new builds - dust, residue, and fine debris cleared to a handover-ready finish.",
     bullets: [
       "Dust and debris removal",
       "Paint/adhesive residue removal",
       "Full appliance and fixture wipe-down",
       "Ready-for-move-in or ready-for-inspection standard",
     ],
-    quoteMessage: "Hello GS Pro — I'd like a quote for Post-Construction Cleaning.",
+    quoteMessage: "Hello GS Pro - I'd like a quote for Post-Construction Cleaning.",
     quoteService: "Post Construction Cleaning",
     imageSrc: "/images/services/post-construction-cleaning.jpg",
     imageAlt: "Newly finished interior cleared of construction dust and residue",
@@ -64,14 +64,14 @@ const CORE_SERVICES: ServiceFeatureData[] = [
     id: "specialized",
     title: "Specialized Cleaning",
     description:
-      "Work that needs more than a standard visit — hard-to-reach zones, appliance interiors, and high-touch sanitation tailored to the space.",
+      "Work that needs more than a standard visit - hard-to-reach zones, appliance interiors, and high-touch sanitation tailored to the space.",
     bullets: [
       "Deep-clean of hard-to-reach areas",
       "Appliance interiors",
       "High-touch sanitation",
       "Tailored to the space's specific needs",
     ],
-    quoteMessage: "Hello GS Pro — I'd like a quote for Specialized Cleaning.",
+    quoteMessage: "Hello GS Pro - I'd like a quote for Specialized Cleaning.",
     quoteService: "Deep Cleaning",
     imageSrc: "/images/services/specialized-cleaning.jpg",
     imageAlt: "Detailed cleaning of fixtures and hard-to-reach surfaces in a modern space",
@@ -79,7 +79,7 @@ const CORE_SERVICES: ServiceFeatureData[] = [
 ];
 
 /**
- * Services Showcase — bookable services, compact add-ons, quiet products teaser.
+ * Services Showcase - bookable services, compact add-ons, quiet products teaser.
  */
 export function ServicesSection() {
   return (
@@ -93,7 +93,7 @@ export function ServicesSection() {
           eyebrow="Our Services"
           titleId="services-heading"
           title="What We Clean"
-          description="From everyday domestic visits and commercial schedules to post-construction resets, specialized deep work, and add-ons like sofa or carpet care — GS Pro covers homes, businesses, and the jobs in between."
+          description="From everyday domestic visits and commercial schedules to post-construction resets, specialized deep work, and add-ons like sofa or carpet care - GS Pro covers homes, businesses, and the jobs in between."
         />
 
         <div className="flex flex-col gap-16 md:gap-20 lg:gap-24">

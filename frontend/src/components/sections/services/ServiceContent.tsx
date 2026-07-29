@@ -24,7 +24,7 @@ type ServiceContentProps = {
 
 export function ServiceContent({ service, className }: ServiceContentProps) {
   const includedHref = getWhatsAppQuoteUrl(
-    `Hello GS Pro — please share what's included in ${service.title}.`,
+    `Hello GS Pro - please share what's included in ${service.title}.`,
   );
   const includedExternal = includedHref.startsWith("http");
 

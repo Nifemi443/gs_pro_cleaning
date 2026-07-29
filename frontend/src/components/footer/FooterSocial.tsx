@@ -12,7 +12,7 @@ type SocialItem = {
 };
 
 /**
- * Brand social glyphs — Lucide no longer ships brand icons;
+ * Brand social glyphs - Lucide no longer ships brand icons;
  * paths are standard simple brand marks at consistent 18px.
  */
 function IconFacebook({ className }: { className?: string }) {
@@ -59,11 +59,11 @@ function IconWhatsApp({ className }: { className?: string }) {
 }
 
 /**
- * Social row — Facebook, Instagram, LinkedIn, X, WhatsApp.
+ * Social row - Facebook, Instagram, LinkedIn, X, WhatsApp.
  * TikTok omitted until the client confirms an active account.
  */
 export function FooterSocial({ className }: { className?: string }) {
-  const whatsappHref = getWhatsAppQuoteUrl("Hello GS Pro — I'd like to get in touch via WhatsApp.");
+  const whatsappHref = getWhatsAppQuoteUrl("Hello GS Pro - I'd like to get in touch via WhatsApp.");
 
   const items: SocialItem[] = [
     {

@@ -16,7 +16,7 @@ type ReviewPlaceholderProps = {
 };
 
 /**
- * Inactive platform badge slots — no ratings or review counts.
+ * Inactive platform badge slots - no ratings or review counts.
  */
 export function ReviewPlaceholder({ className }: ReviewPlaceholderProps) {
   const reduceMotion = useReducedMotion();

@@ -8,14 +8,14 @@ type ServiceImageProps = {
   src: string;
   alt: string;
   badge?: string;
-  /** Enable group-hover zoom — off for inactive teasers */
+  /** Enable group-hover zoom - off for inactive teasers */
   zoomOnHover?: boolean;
   muted?: boolean;
   className?: string;
 };
 
 /**
- * Service photo — local public/images assets via Next/Image.
+ * Service photo - local public/images assets via Next/Image.
  */
 export function ServiceImage({
   src,

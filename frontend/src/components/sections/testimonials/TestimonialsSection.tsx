@@ -9,7 +9,7 @@ import {
 } from "@/components/sections/testimonials/TestimonialCard";
 
 /**
- * Placeholder cards — structural service patterns only, no fabricated content.
+ * Placeholder cards - structural service patterns only, no fabricated content.
  * Featured card spans larger footprint to break a uniform grid.
  */
 const PLACEHOLDERS: TestimonialPlaceholder[] = [
@@ -30,7 +30,7 @@ const PLACEHOLDERS: TestimonialPlaceholder[] = [
 ];
 
 /**
- * Testimonials & Social Proof — polished placeholders until real reviews arrive.
+ * Testimonials & Social Proof - polished placeholders until real reviews arrive.
  */
 export function TestimonialsSection() {
   return (

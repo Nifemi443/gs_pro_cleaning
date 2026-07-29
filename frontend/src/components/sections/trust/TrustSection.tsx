@@ -12,7 +12,7 @@ const TRUST_CARDS: TrustCardData[] = [
     id: "residential",
     title: "Residential Cleaning",
     description:
-      "Beds made, counters clear, floors that look walked-on-by-socks — a home that feels done when you walk back in.",
+      "Beds made, counters clear, floors that look walked-on-by-socks - a home that feels done when you walk back in.",
     icon: Home,
     featured: true,
     className: "md:col-span-2 md:row-span-2",
@@ -21,7 +21,7 @@ const TRUST_CARDS: TrustCardData[] = [
     id: "commercial",
     title: "Commercial Cleaning",
     description:
-      "Offices and facilities kept to the same standard every weekday — so clients never walk into yesterday’s dust.",
+      "Offices and facilities kept to the same standard every weekday - so clients never walk into yesterday’s dust.",
     icon: Building2,
     className: "md:col-span-2",
   },
@@ -29,7 +29,7 @@ const TRUST_CARDS: TrustCardData[] = [
     id: "professionals",
     title: "Experienced Professionals",
     description:
-      "ID-checked teams trained on room-by-room checklists — not day labour rotated through your door.",
+      "ID-checked teams trained on room-by-room checklists - not day labour rotated through your door.",
     icon: UserRoundCheck,
     className: "md:col-span-1",
   },
@@ -44,7 +44,7 @@ const TRUST_CARDS: TrustCardData[] = [
 ];
 
 /**
- * Trust & Credibility — first proof point after the hero.
+ * Trust & Credibility - first proof point after the hero.
  * Asymmetric bento grid; Residential Cleaning anchors the layout.
  */
 export function TrustSection() {

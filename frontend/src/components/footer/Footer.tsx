@@ -54,12 +54,12 @@ const CONTACT_ITEMS: ContactItem[] = [
     id: "hours",
     icon: Clock,
     label: "Business hours",
-    value: "[Mon–Sat, 8am–6pm]",
+    value: "[Mon-Sat, 8am-6pm]",
   },
 ];
 
 /**
- * Site footer — navy close-out with quote CTA and contact details.
+ * Site footer - navy close-out with quote CTA and contact details.
  *
  * TikTok omitted until the client confirms an active account.
  */
@@ -83,7 +83,7 @@ export function Footer() {
         >
           {/* Brand */}
           <div className="order-1 flex flex-col gap-4">
-            {/* REPLACE: footer-logo-light.png — light mark for navy ground */}
+            {/* REPLACE: footer-logo-light.png - light mark for navy ground */}
             <Logo height={48} className="brightness-0 invert" href={ROUTES.home} />
             <p className="max-w-xs text-sm leading-[1.65] text-white/70">
               Professional residential and commercial cleaning services delivering reliable,
@@ -137,7 +137,7 @@ export function Footer() {
             </ul>
           </FooterColumn>
 
-          {/* Contact — sits with Brand on tablet (col 1) */}
+          {/* Contact - sits with Brand on tablet (col 1) */}
           <FooterColumn title="Contact" className="order-5 md:order-2 lg:order-4">
             <ul className="flex flex-col gap-3.5">
               {CONTACT_ITEMS.map((item) => {

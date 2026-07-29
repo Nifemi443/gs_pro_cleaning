@@ -12,7 +12,7 @@ type QuoteButtonProps = Omit<React.ComponentProps<typeof BrandButton>, "render" 
   VariantProps<typeof brandButtonVariants> & {
     /** Prefill cleaning service when the modal opens */
     defaultService?: CleaningService;
-    /** @deprecated Direct WhatsApp message — modal flow is preferred */
+    /** @deprecated Direct WhatsApp message - modal flow is preferred */
     message?: string;
   };
 

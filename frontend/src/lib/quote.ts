@@ -20,9 +20,9 @@ export const PROPERTY_TYPES = [
 ] as const;
 
 export const PREFERRED_TIMES = [
-  "Morning (8am–12pm)",
-  "Afternoon (12pm–4pm)",
-  "Evening (4pm–7pm)",
+  "Morning (8am-12pm)",
+  "Afternoon (12pm-4pm)",
+  "Evening (4pm-7pm)",
   "Flexible",
 ] as const;
 
@@ -59,7 +59,7 @@ export const quoteStep1Schema = z.object({
     .string()
     .trim()
     .min(7, "Please enter a valid phone number.")
-    .regex(/^[+\d\s()-]{7,20}$/, "Use digits only — include country code if you can."),
+    .regex(/^[+\d\s()-]{7,20}$/, "Use digits only - include country code if you can."),
   email: z.string().trim().email("Please enter a valid email address."),
 });
 

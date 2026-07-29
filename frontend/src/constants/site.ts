@@ -11,7 +11,7 @@ export const SITE = {
 export const CONTACT = {
   phoneDisplay: "+1 202 209 6917",
   phoneTel: "+12022096917",
-  /** Digits only — WhatsApp / wa.me */
+  /** Digits only - WhatsApp / wa.me */
   phoneE164Digits: "12022096917",
   instagramHandle: "Gs_procleaners",
   instagramUrl: "https://www.instagram.com/Gs_procleaners/",
@@ -27,7 +27,7 @@ export const ROUTES = {
   about: "/#trust",
   services: "/#services",
   gallery: "/#gallery",
-  faq: "/#faq",
+  testimonials: "/#testimonials",
   contact: "/#contact",
 } as const;
 
@@ -36,12 +36,12 @@ export const NAV_LINKS: NavLink[] = [
   { label: "About", href: ROUTES.about },
   { label: "Services", href: ROUTES.services },
   { label: "Gallery", href: ROUTES.gallery },
-  { label: "FAQ", href: ROUTES.faq },
+  { label: "Testimonials", href: ROUTES.testimonials },
   { label: "Contact", href: ROUTES.contact },
 ];
 
 export const DEFAULT_QUOTE_MESSAGE =
-  "Hello GS Pro — I'd like to book a cleaning. Please share availability and next steps.";
+  "Hello GS Pro - I'd like to book a cleaning. Please share availability and next steps.";
 
 export const PRICING_QUOTE_MESSAGE =
-  "Hello GS Pro — please share your current pricing for residential and commercial cleaning.";
+  "Hello GS Pro - please share your current pricing for residential and commercial cleaning.";

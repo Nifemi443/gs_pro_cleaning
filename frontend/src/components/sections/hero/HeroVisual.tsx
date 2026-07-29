@@ -7,7 +7,7 @@ import { HeroStats } from "@/components/sections/hero/HeroStats";
 import { easePremium } from "@/components/animations/presets";
 
 /**
- * Local hero asset — path must match public/ exactly (case + extension).
+ * Local hero asset - path must match public/ exactly (case + extension).
  * Previously remote Unsplash; `lg:aspect-auto` + min-height alone left the
  * fill parent without a definite height, so the mist fallback showed at the top.
  */
