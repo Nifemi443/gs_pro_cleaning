@@ -42,11 +42,12 @@ const PROJECTS: ProjectCardData[] = [
     title: "Post-Construction Cleanup",
     propertyType: "Newly Built Home",
     description:
-      "Dust, adhesive residue, and fine debris cleared from a new kitchen so handover photos look finished.",
-    beforeLabel: "Kitchen Build - Before",
-    afterLabel: "Kitchen Build - After",
-    beforeAlt: "Before and after: post-construction cleanup, newly built home kitchen",
-    afterAlt: "After: post-construction cleanup, newly built home kitchen",
+      "Construction dust, debris, and residue cleared from the entrance and porch so handover looks finished.",
+    beforeLabel: "Entrance - Before",
+    afterLabel: "Entrance - After",
+    beforeAlt:
+      "Before: post-construction cleanup of a dusty entrance porch with debris and residue",
+    afterAlt: "After: post-construction cleanup of the same entrance with cleaned tile and railing",
     beforeSrc: "/images/before-after/post-construction-before.jpg",
     afterSrc: "/images/before-after/post-construction-after.jpg",
     className: "lg:col-span-2",
