@@ -6,28 +6,29 @@ import { Star, User } from "lucide-react";
 import { easePremium } from "@/components/animations/presets";
 import { cn } from "@/lib/utils";
 
-export type TestimonialPlaceholder = {
+export type Testimonial = {
   id: string;
-  /** Structural service pattern - not a fabricated review claim */
-  servicePattern: string;
+  quote: string;
+  name: string;
+  location: string;
   featured?: boolean;
   className?: string;
 };
 
 type TestimonialCardProps = {
-  placeholder: TestimonialPlaceholder;
+  testimonial: Testimonial;
   index: number;
 };
 
-function UnfilledStars() {
+function FilledStars() {
   return (
-    <div className="flex items-center gap-0.5" aria-label="Star rating not yet available">
+    <div className="flex items-center gap-0.5" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
-          className="size-3.5 text-[#b8b4ae]"
+          className="size-3.5 text-[#B8912F]"
           strokeWidth={1.5}
-          fill="none"
+          fill="currentColor"
           aria-hidden
         />
       ))}
@@ -36,10 +37,16 @@ function UnfilledStars() {
 }
 
 /**
- * Clearly placeholder testimonial card - no fabricated names, quotes, or ratings.
+ * Client testimonial card with quote, name, and location.
  */
-export function TestimonialCard({ placeholder, index }: TestimonialCardProps) {
+export function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
   const reduceMotion = useReducedMotion();
+  const initials = testimonial.name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
 
   return (
     <motion.article
@@ -47,16 +54,17 @@ export function TestimonialCard({ placeholder, index }: TestimonialCardProps) {
         "flex h-full flex-col rounded-[12px] bg-white p-5 shadow-[0_4px_18px_rgb(18_41_77/0.06)] sm:p-6",
         "transition-[box-shadow,transform] duration-300",
         "hover:shadow-[0_10px_28px_rgb(18_41_77/0.1)]",
-        placeholder.className,
+        testimonial.featured && "ring-brand-gold/40 ring-1",
+        testimonial.className,
       )}
-      aria-label="Testimonial placeholder - content pending"
+      aria-label={`Testimonial from ${testimonial.name}`}
       initial={reduceMotion ? false : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{
         duration: 0.4,
         ease: easePremium,
-        delay: reduceMotion ? 0 : index * 0.1,
+        delay: reduceMotion ? 0 : Math.min(index, 5) * 0.07,
       }}
       whileHover={
         reduceMotion ? undefined : { y: -3, transition: { duration: 0.2, ease: easePremium } }
@@ -64,26 +72,24 @@ export function TestimonialCard({ placeholder, index }: TestimonialCardProps) {
     >
       <div className="flex items-center gap-3">
         <span
-          className="flex size-11 shrink-0 items-center justify-center rounded-full bg-[#e8e6e2] text-[#8a8490]"
+          className="bg-brand-navy/8 text-brand-navy flex size-11 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
           aria-hidden
         >
-          <User className="size-5" strokeWidth={1.75} />
+          {initials || <User className="size-5" strokeWidth={1.75} />}
         </span>
         <div className="min-w-0">
-          <p className="truncate text-sm font-semibold text-[#6b6570]">[Client Name]</p>
-          <p className="truncate text-xs text-[#8a8490]">[City/Area]</p>
+          <p className="text-brand-navy truncate text-sm font-semibold">{testimonial.name}</p>
+          <p className="truncate text-xs text-[#5c6570]">{testimonial.location}</p>
         </div>
       </div>
 
-      <p className="mt-3 text-[0.6875rem] font-medium tracking-wide text-[#8a8490] uppercase">
-        {placeholder.servicePattern}
-      </p>
+      <div className="mt-3">
+        <FilledStars />
+      </div>
 
-      <UnfilledStars />
-
-      <p className="mt-4 flex-1 font-[family-name:var(--font-display)] text-[0.9375rem] leading-[1.65] text-[#5c6570] italic sm:text-base">
-        Client testimonial will appear here once available.
-      </p>
+      <blockquote className="mt-4 flex-1 font-[family-name:var(--font-display)] text-[0.9375rem] leading-[1.65] text-[#3d4654] italic sm:text-base">
+        &ldquo;{testimonial.quote}&rdquo;
+      </blockquote>
     </motion.article>
   );
 }

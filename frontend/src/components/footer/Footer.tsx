@@ -35,7 +35,7 @@ const CONTACT_ITEMS: ContactItem[] = [
     id: "address",
     icon: MapPin,
     label: "Office address",
-    value: "[Office Address]",
+    value: CONTACT.address,
   },
   {
     id: "phone",
@@ -48,13 +48,14 @@ const CONTACT_ITEMS: ContactItem[] = [
     id: "email",
     icon: Mail,
     label: "Email address",
-    value: "[Email Address]",
+    value: CONTACT.email,
+    href: `mailto:${CONTACT.email}`,
   },
   {
     id: "hours",
     icon: Clock,
     label: "Business hours",
-    value: "[Mon-Sat, 8am-6pm]",
+    value: CONTACT.hours,
   },
 ];
 

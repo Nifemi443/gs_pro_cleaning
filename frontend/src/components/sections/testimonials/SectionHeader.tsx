@@ -10,7 +10,7 @@ type SectionHeaderProps = {
 };
 
 /**
- * Left-column header for Testimonials - honest about pending reviews.
+ * Left-column header for Testimonials.
  */
 export function SectionHeader({ className }: SectionHeaderProps) {
   const reduceMotion = useReducedMotion();
@@ -31,22 +31,13 @@ export function SectionHeader({ className }: SectionHeaderProps) {
           id="testimonials-heading"
           className="text-brand-navy font-[family-name:var(--font-display)] text-[length:var(--text-h2)] leading-[var(--leading-heading)] font-semibold tracking-[var(--tracking-heading)]"
         >
-          Feedback Worth Waiting For
+          Trusted in Homes Across Nigeria &amp; the US
         </h2>
         <p className="mt-4 max-w-md text-[length:var(--text-body-lg)] leading-[1.65] text-[#3d4654]">
-          As we complete more jobs, we&apos;ll share what clients are saying - real names, real
-          spaces, real outcomes. This space is ready for those voices.
+          Real feedback from clients who booked GS Pro - from Lagos and Ibadan to Houston, Dallas,
+          and beyond.
         </p>
       </div>
-
-      {/* No reviews destination yet - low-emphasis, non-active control */}
-      <span
-        className="inline-flex w-fit cursor-not-allowed items-center gap-2 rounded-[8px] border border-[#d8d4ce] bg-transparent px-4 py-2.5 text-sm font-semibold text-[#8a8490]"
-        aria-disabled="true"
-        title="Reviews page coming soon"
-      >
-        Read More Reviews
-      </span>
     </motion.div>
   );
 }

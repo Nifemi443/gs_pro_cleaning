@@ -13,6 +13,9 @@ export const CONTACT = {
   phoneTel: "+12022096917",
   /** Digits only - WhatsApp / wa.me */
   phoneE164Digits: "12022096917",
+  email: "gsprocleaningservices@gmail.com",
+  hours: "Mon-Sat, 8am-6pm",
+  address: "Office Address",
   instagramHandle: "Gs_procleaners",
   instagramUrl: "https://www.instagram.com/Gs_procleaners/",
 } as const;
@@ -26,6 +29,8 @@ export const ROUTES = {
   home: "/",
   about: "/#trust",
   services: "/#services",
+  groupHomes: "/#group-homes",
+  pricing: "/#pricing",
   gallery: "/#gallery",
   testimonials: "/#testimonials",
   contact: "/#contact",
@@ -35,6 +40,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: ROUTES.home },
   { label: "About", href: ROUTES.about },
   { label: "Services", href: ROUTES.services },
+  { label: "Group Homes", href: ROUTES.groupHomes },
   { label: "Gallery", href: ROUTES.gallery },
   { label: "Testimonials", href: ROUTES.testimonials },
   { label: "Contact", href: ROUTES.contact },
