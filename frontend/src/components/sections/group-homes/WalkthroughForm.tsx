@@ -10,6 +10,7 @@ import { BrandButton } from "@/components/buttons";
 import { Field, quoteFieldClassName } from "@/components/quote/Field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { CONTACT } from "@/constants/site";
 import {
   formatWalkthroughWhatsAppMessage,
   walkthroughDefaults,
@@ -17,10 +18,10 @@ import {
   type WalkthroughFormValues,
 } from "@/lib/walkthrough";
 import { cn } from "@/lib/utils";
-import { getWhatsAppQuoteUrl } from "@/lib/whatsapp";
+import { getWhatsAppQuoteUrl, openWhatsAppChat } from "@/lib/whatsapp";
 
 /**
- * Lead capture for Survey-Ready compliance walkthroughs → WhatsApp.
+ * Lead capture for Survey-Ready compliance walkthroughs → WhatsApp inbox.
  */
 export function WalkthroughForm() {
   const reduceMotion = useReducedMotion();
@@ -39,9 +40,10 @@ export function WalkthroughForm() {
     const message = formatWalkthroughWhatsAppMessage(data);
     const href = getWhatsAppQuoteUrl(message);
     setWhatsAppHref(href);
+    // Brief success flash, then navigate to WhatsApp with every field pre-filled
     window.setTimeout(() => {
-      window.open(href, "_blank", "noopener,noreferrer");
-    }, 400);
+      openWhatsAppChat(message);
+    }, 350);
   };
 
   return (
@@ -58,14 +60,15 @@ export function WalkthroughForm() {
             Opening WhatsApp...
           </p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-[#3d4654]">
-            Your walkthrough request is ready to send. If WhatsApp didn&apos;t open, tap below.
+            Your details are ready for {CONTACT.phoneDisplay}. Tap Send in WhatsApp to deliver. If
+            it didn&apos;t open, use the button below.
           </p>
           <BrandButton
             size="md"
             className="bg-brand-green hover:bg-brand-green-hover mt-6"
-            render={<a href={whatsAppHref} target="_blank" rel="noopener noreferrer" />}
+            render={<a href={whatsAppHref} />}
           >
-            Open WhatsApp
+            Open WhatsApp to {CONTACT.phoneDisplay}
           </BrandButton>
         </div>
       ) : (
@@ -75,7 +78,8 @@ export function WalkthroughForm() {
               Schedule a Compliance Walkthrough
             </h3>
             <p className="mt-1.5 text-sm leading-relaxed text-[#5c6570]">
-              Tell us about your facility. We&apos;ll follow up to book an on-site assessment.
+              Tell us about your facility. Everything you enter is sent to GS Pro on WhatsApp (
+              {CONTACT.phoneDisplay}).
             </p>
           </div>
 
@@ -172,7 +176,7 @@ export function WalkthroughForm() {
                 id="notes"
                 rows={3}
                 className={cn(quoteFieldClassName, "h-auto min-h-[5.5rem] py-2.5")}
-                placeholder="Number of homes, survey timeline, special areas…"
+                placeholder="Number of homes, survey timeline, special areas..."
                 {...register("notes")}
               />
             </Field>
@@ -184,10 +188,10 @@ export function WalkthroughForm() {
             className="bg-brand-green hover:bg-brand-green-hover mt-2 w-full"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Preparing…" : "Request Walkthrough via WhatsApp"}
+            {isSubmitting ? "Opening WhatsApp..." : "Send to WhatsApp"}
           </BrandButton>
           <p className="text-center text-xs text-[#8a8490]">
-            Submits a pre-filled WhatsApp message to GS Pro - no spam, no portal login.
+            Opens WhatsApp to {CONTACT.phoneDisplay} with your full form ready to send.
           </p>
         </form>
       )}

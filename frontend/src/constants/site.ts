@@ -15,7 +15,6 @@ export const CONTACT = {
   phoneE164Digits: "12022096917",
   email: "gsprocleaningservices@gmail.com",
   hours: "Mon-Sat, 8am-6pm",
-  address: "Office Address",
   instagramHandle: "Gs_procleaners",
   instagramUrl: "https://www.instagram.com/Gs_procleaners/",
 } as const;

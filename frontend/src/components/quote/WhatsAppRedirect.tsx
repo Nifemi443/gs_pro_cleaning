@@ -2,7 +2,8 @@
 
 import * as React from "react";
 
-import { getWhatsAppQuoteUrl } from "@/lib/whatsapp";
+import { CONTACT } from "@/constants/site";
+import { openWhatsAppChat } from "@/lib/whatsapp";
 
 type WhatsAppRedirectProps = {
   message: string;
@@ -12,18 +13,21 @@ type WhatsAppRedirectProps = {
 };
 
 /**
- * Opens WhatsApp with a pre-filled, encoded quote message after a short delay.
+ * Opens WhatsApp to the GS Pro number with a pre-filled form message.
  */
-export function WhatsAppRedirect({ message, delayMs = 1600, onRedirect }: WhatsAppRedirectProps) {
+export function WhatsAppRedirect({ message, delayMs = 1200, onRedirect }: WhatsAppRedirectProps) {
   React.useEffect(() => {
-    const href = getWhatsAppQuoteUrl(message);
     const timer = window.setTimeout(() => {
       onRedirect?.();
-      window.open(href, "_blank", "noopener,noreferrer");
+      openWhatsAppChat(message);
     }, delayMs);
 
     return () => window.clearTimeout(timer);
   }, [message, delayMs, onRedirect]);
 
-  return null;
+  return (
+    <p className="sr-only">
+      Redirecting to WhatsApp at {CONTACT.phoneDisplay} with your form details.
+    </p>
+  );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, Phone } from "lucide-react";
 
 import { QuoteButton } from "@/components/buttons";
 import { FooterBottomBar } from "@/components/footer/FooterBottomBar";
@@ -31,12 +31,6 @@ type ContactItem = {
 };
 
 const CONTACT_ITEMS: ContactItem[] = [
-  {
-    id: "address",
-    icon: MapPin,
-    label: "Office address",
-    value: CONTACT.address,
-  },
   {
     id: "phone",
     icon: Phone,

@@ -4,6 +4,7 @@
  */
 
 import { CONTACT } from "@/constants/site";
+import { getWhatsAppNumber } from "@/lib/whatsapp";
 
 function requirePublicEnv(name: string, value: string | undefined): string {
   if (!value) {
@@ -18,9 +19,13 @@ function requirePublicEnv(name: string, value: string | undefined): string {
 export const env = {
   apiUrl: process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000/api/v1",
   cloudinaryCloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME ?? "",
-  whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? CONTACT.phoneE164Digits,
+  /** Always resolves to the live GS Pro WhatsApp inbox digits */
+  get whatsappNumber() {
+    return getWhatsAppNumber();
+  },
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   siteName: process.env.NEXT_PUBLIC_SITE_NAME ?? "GS Pro Cleaning Services",
+  contactPhoneDisplay: CONTACT.phoneDisplay,
 } as const;
 
 /** Call during bootstrap when a value must exist (e.g. production deploy checks). */
