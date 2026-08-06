@@ -84,7 +84,7 @@ export function Footer() {
         >
           {/* Brand */}
           <div className="order-1 flex flex-col gap-4">
-            <Logo height={56} className="brightness-0 invert" href={ROUTES.home} />
+            <Logo height={60} href={ROUTES.home} />
             <p className="max-w-xs text-sm leading-[1.65] text-white/70">
               Professional residential and commercial cleaning services delivering reliable,
               detail-oriented cleaning solutions.

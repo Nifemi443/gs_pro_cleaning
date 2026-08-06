@@ -4,8 +4,8 @@ import Link from "next/link";
 import { SITE } from "@/constants/site";
 import { cn } from "@/lib/utils";
 
-/** Intrinsic logo aspect after trim (960×320). */
-const LOGO_ASPECT = 960 / 320;
+/** Intrinsic logo aspect after trim (986×416). */
+const LOGO_ASPECT = 986 / 416;
 
 type LogoProps = {
   className?: string;
@@ -14,7 +14,7 @@ type LogoProps = {
   priority?: boolean;
 };
 
-export function Logo({ className, height = 56, href = "/", priority = false }: LogoProps) {
+export function Logo({ className, height = 58, href = "/", priority = false }: LogoProps) {
   const width = Math.round(height * LOGO_ASPECT);
 
   const image = (
@@ -24,6 +24,7 @@ export function Logo({ className, height = 56, href = "/", priority = false }: L
       width={width}
       height={height}
       priority={priority}
+      unoptimized
       className={cn("h-auto w-auto max-w-none object-contain object-left", className)}
       style={{ height, width }}
     />
